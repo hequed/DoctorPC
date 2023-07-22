@@ -25,11 +25,15 @@ html {
 }
 
 body {
+    /* Cambiar el fondo a una imagen de fondo */
     background-image: url('mediaImages/image2.jpg');
     background-size: cover;
+    background-position: center; /* Agregar esta propiedad para centrar la imagen */
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: var(--text-color);
+    min-height: 100vh; /* Agregar esta propiedad para que el body ocupe al menos el 100% de la altura de la pantalla */
+    margin: 0; /* Eliminar el margen por defecto */
 }
 
 section {
