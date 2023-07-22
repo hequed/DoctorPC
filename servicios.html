@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios y Precios</title>
+    <!-- Agregar el favicon -->
+    <link rel="icon" type="image/png" href="mediaImages/favicon.png">
+    <link rel="stylesheet" href="stylesServicios.css">
+</head>
+<body>
+    <h1>SERVICIOS</h1>
+    <table>
+        <tr>
+            <th>SERVICIO</th>
+            <th>PRECIO</th>
+            <th>DETALLE</th>
+        </tr>
+        <tr onclick="sendWhatsapp('Hola DoctorPC deseo el servicio: Mantención General - $14.990 - Limpieza de Hardware + Pasta disipadora en el Procesador + Pasta disipadora en GPU')">
+            <td>Mantención General</td>
+            <td>$14.990</td>
+            <td>Limpieza de Hardware + Pasta disipadora en el Procesador + Pasta disipadora en GPU</td>
+        </tr>
+        <tr onclick="sendWhatsapp('Hola DoctorPC deseo el servicio: Restauración + Microsoft Office - $14.990 - Incluye instalación de Sistema Operativo deseado + Microsoft Office')">
+            <td>Restauración + Microsoft Office</td>
+            <td>$14.990</td>
+            <td>Incluye instalación de Sistema Operativo deseado + Microsoft Office</td>
+        </tr>
+        <tr onclick="sendWhatsapp('Hola DoctorPC deseo el servicio: Instalación de Programas - $7.990 - Microsoft Office, AutoCAD, Revit, Spotify-Premium (Android) y más (consultar)')">
+            <td>Instalación de Programas</td>
+            <td>$7.990</td>
+            <td>Microsoft Office, AutoCAD, Revit, Spotify-Premium (Android) y más (consultar)</td>
+        </tr>
+        <tr onclick="sendWhatsapp('Hola DoctorPC deseo el servicio: Respaldo de Informacion - $11.990 - Respaldo y traspaso de Información')">
+            <td>Respaldo de Informacion</td>
+            <td>$11.990</td>
+            <td>Respaldo y traspaso de Información</td>
+        </tr>
+    </table>
+
+    <!-- Script para enviar mensajes a WhatsApp -->
+    <script>
+        function sendWhatsapp(message) {
+            var formattedMessage = encodeURIComponent(message);
+            var phoneNumber = "945287805";
+            var whatsappLink = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + formattedMessage;
+            window.open(whatsappLink, "_blank");
+        }
+    </script>
+
+     <!-- Footer -->
+     <footer>
+        <div class="footer-content">
+            <div class="footer-item">
+                <p>Teléfono: <a href="tel:945287805">+56945287805</a></p>
+            </div>
+            <div class="footer-item">
+                <p>Correo: <a href="mailto:contacto@doctorpc.com">doctorpc@gmail.com</a></p>
+            </div>
+            <div class="footer-item">
+                <p>Dirección: Valparaiso, Chile</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
